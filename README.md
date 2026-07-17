@@ -40,6 +40,15 @@ El formulario HTML (`Proyecto_TutorBot`) es indispensable para el flujo de `regi
 *   El HTML captura los datos personales y los envía al Webhook de n8n.
 *   n8n procesa estos datos y notifica al usuario en Telegram sobre el éxito del registro.
 
+### Update: Examen 2 Carlos Elias Tzoy Velasco
+
+- Los nodos permiten ver mediante un boton los puntos recibidos por el tutor mediante un filtro de estudiante. El nodo se compone de un google sheet y code de js y http request envia los puntos registrados. El maestro puede poner puntos al estudiante mediante la seleccion del estudiante y los puntos que puede asignar. Luego se reemplaza en el google sheet del estudiante.
+
+![evidencia](./evidencia/evidencia_1.png)
+
+
+
+
 **Elaborado por:** 
 - Carlos Elias Tzoy Velasco
 - Evelyn Noemi Barrios
