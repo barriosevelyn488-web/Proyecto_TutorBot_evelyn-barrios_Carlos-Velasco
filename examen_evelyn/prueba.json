@@ -1,2635 +1,1091 @@
 {
-    "nodes": [
-      {
-        "parameters": {
-          "rules": {
-            "values": [
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "leftValue": "={{ $('diferenciar por etiquetas').item.json.valor }}",
-                      "rightValue": "registro",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      },
-                      "id": "12442acb-6d08-48fb-84b1-8d27c49c2590"
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "d83e2295-aace-4c86-9f16-32de456a833e",
-                      "leftValue": "={{ $('diferenciar por etiquetas').item.json.valor }}",
-                      "rightValue": "consultas",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals",
-                        "name": "filter.operator.equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "f3a044f5-7c56-44cc-b6e2-e7ac6c8b9e06",
-                      "leftValue": "={{ $('diferenciar por etiquetas').item.json.valor }}",
-                      "rightValue": "matricula",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals",
-                        "name": "filter.operator.equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "43ecba29-9f55-4d69-9735-d613b57762b5",
-                      "leftValue": "={{ $('diferenciar por etiquetas').item.json.valor }}",
-                      "rightValue": "materia",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals",
-                        "name": "filter.operator.equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "060e2dc9-ac85-4a83-b3ac-a0e9379f6b23",
-                      "leftValue": "={{ $('diferenciar por etiquetas').item.json.valor }}",
-                      "rightValue": "horarios",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals",
-                        "name": "filter.operator.equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "f69a8b71-8ff7-4124-bdc3-9289b6a13b90",
-                      "leftValue": "={{ $('diferenciar por etiquetas').item.json.valor }}",
-                      "rightValue": "regreso",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "0421bcfd-3509-47ba-acb3-014884fa58d1",
+              "leftValue": "={{ $json.registrado1 }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
               }
-            ]
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.switch",
-        "typeVersion": 3.4,
-        "position": [
-          -432,
-          640
-        ],
-        "id": "051a2056-b32d-4abe-9677-7675c350710e",
-        "name": "Switch"
-      },
-      {
-        "parameters": {
-          "httpMethod": "POST",
-          "path": "2175dafb-0902-4ca2-b118-4e5bc913ce4d",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.webhook",
-        "typeVersion": 2.1,
-        "position": [
-          -1072,
-          160
-        ],
-        "id": "25e37fba-bb6e-4174-a004-6c7121d99365",
-        "name": "Webhook",
-        "webhookId": "2175dafb-0902-4ca2-b118-4e5bc913ce4d"
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 104329106,
-            "mode": "list",
-            "cachedResultName": "Estudiantes",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=104329106"
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.1,
-        "position": [
-          -864,
-          160
-        ],
-        "id": "cbd2853d-2640-49d0-8d03-ae2af7be14d3",
-        "name": "Obtener ultimo ID",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 312719008,
-            "mode": "list",
-            "cachedResultName": "Materias",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=312719008"
-          },
-          "filtersUI": {
-            "values": [
-              {}
-            ]
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          -64,
-          928
-        ],
-        "id": "317e8ea4-965d-4201-9161-837ea08268b5",
-        "name": "Get row(s) in sheet",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "jsCode": "const items = $input.all();\nconst chatId = $('recibe el callback_querys').item.json.callback_query.message.chat.id;\n\n// Construimos el mensaje de texto\nconst mensajeTelegram = items.map(item => {\n    const m = item.json;\n    return `*Materia:* ${m.nombre_materia} (\\`${m.materia_id}\\`)\\n` +\n           `*Tutor:* ${m.tutor} (ID: \\`${m.tutor_id}\\`)\\n` +\n           `----------------------`;\n}).join('\\n');\n\nconst mensajeFinal = `📅 *Lista de Materias y Tutores Disponibles:*\\n\\n${mensajeTelegram}`;\n\nreturn {\n    json: {\n        chat_id: chatId,\n        text: mensajeFinal,\n        parse_mode: \"Markdown\",\n        reply_markup: {\n            inline_keyboard: [[\n                {\n                    text: \"regresar al menu principal\",\n                    callback_data: \"menu#regreso\"\n                }\n            ]]\n        }\n    }\n};"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          144,
-          928
-        ],
-        "id": "5855c81a-4f03-4c12-aaaf-10fda627f00d",
-        "name": "Code in JavaScript2"
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 687256217,
-            "mode": "list",
-            "cachedResultName": "Horarios",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=687256217"
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          -32,
-          1456
-        ],
-        "id": "418c5bcb-a215-4f4f-abe9-c7521da0de84",
-        "name": "horarios",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 2026371281,
-            "mode": "list",
-            "cachedResultName": "Tutores",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=2026371281"
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          -32,
-          1104
-        ],
-        "id": "569d935e-5cc3-4f96-88a6-92b24b136d66",
-        "name": "Get row(s) in sheet2",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "jsCode": "const maestros = items; \n\nconst botones = maestros.map(maestro => {\n  return [{\n    text: maestro.json.nombre, \n    callback_data: `lista# ${maestro.json.tutor_id}`\n  }];\n});\n\nreturn {\n  chat_id: $('recibe el callback_querys').first().json.callback_query.message.chat.id,\n  text: \"Selecciona un tutor:\",\n  reply_markup: {\n    inline_keyboard: botones\n  }\n};"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          176,
-          1104
-        ],
-        "id": "1aaf435a-4d89-4f5c-aa59-e840adcd03ba",
-        "name": "Code in JavaScript4"
-      },
-      {
-        "parameters": {
-          "operation": "append",
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 104329106,
-            "mode": "list",
-            "cachedResultName": "Estudiantes",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=104329106"
-          },
-          "columns": {
-            "mappingMode": "defineBelow",
-            "value": {
-              "estudiante_id": "={{ $('validacion de datos.').item.json.estudiante_id }}",
-              "nombre": "={{ $('Webhook').item.json.body.nombres }}",
-              "email": "={{ $('Webhook').item.json.body.email }}",
-              "carrera": "={{ $('Webhook').item.json.body.carrera }}"
-            },
-            "matchingColumns": [],
-            "schema": [
-              {
-                "id": "estudiante_id",
-                "displayName": "estudiante_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true
-              },
-              {
-                "id": "nombre",
-                "displayName": "nombre",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true
-              },
-              {
-                "id": "email",
-                "displayName": "email",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true
-              },
-              {
-                "id": "carrera",
-                "displayName": "carrera",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true
-              }
-            ],
-            "attemptToConvertTypes": false,
-            "convertFieldsToString": false
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          -160,
-          80
-        ],
-        "id": "9a60922f-61bc-41ba-90a5-a730d5b83dae",
-        "name": "registrar al estudiante.",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "updates": [
-            "callback_query",
-            "message"
+            }
           ],
-          "additionalFields": {}
+          "combinator": "and"
         },
-        "type": "n8n-nodes-base.telegramTrigger",
-        "typeVersion": 1.3,
-        "position": [
-          -1056,
-          992
-        ],
-        "id": "c5b06d3b-a852-49c4-a786-9b820fe16687",
-        "name": "recibe el callback_querys",
-        "webhookId": "716a31ee-e7e3-4bf3-9f0a-f382993222e1",
-        "credentials": {
-          "telegramApi": {
-            "id": "6Isoy0MBmmmBTRZd",
-            "name": "student"
-          }
-        }
+        "looseTypeValidation": true,
+        "options": {}
       },
-      {
-        "parameters": {
-          "jsCode": "// 1. Obtener datos de la hoja\nconst todosLosDatos = items.map(item => item.json);\n\nconst rawValor = $('diferenciar por etiquetas').first().json.valor;\nconst valorBuscado = String(rawValor).trim();\n\nconst datosFiltrados = todosLosDatos.filter(d => {\n    const idEnHoja = String(d.tutor_id).trim();\n    return idEnHoja === valorBuscado;\n});\n\nif (datosFiltrados.length === 0) {\n    console.log(\"DEBUG: Comparando valorBuscado [\" + valorBuscado + \"] contra los IDs de la hoja.\");\n    return { \n        json: { text: \"No encontré resultados. Busqué el ID: \" + valorBuscado } \n    };\n}\n\n// 5. Formatear\nconst nombreProfesor = datosFiltrados[0].nombre;\nlet mensaje = `📅 *Horarios del maestr@ ${nombreProfesor}:*\\n\\n`;\n\ndatosFiltrados.forEach(row => {\n  mensaje += `• *${row.materias}*: ${row.dia} (${row.hora_inicio} - ${row.hora_fin})\\n`;\n});\n\nreturn { json: { text: mensaje } };"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          160,
-          1456
-        ],
-        "id": "76101a8c-289f-446b-8458-1dd0160ab651",
-        "name": "Code in JavaScript1"
-      },
-      {
-        "parameters": {
-          "rules": {
-            "values": [
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "leftValue": "={{ $json.tipo }}",
-                      "rightValue": "menu",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      },
-                      "id": "960eecd5-86c5-4092-aa93-edd1e6a61eda"
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        704,
+        560
+      ],
+      "id": "ad9d6484-6c7d-4d88-8761-61f95dcda0af",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5f59b9de-0fa3-425f-9797-ec854c8a8d14",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "consultar",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
                     }
-                  ],
-                  "combinator": "and"
-                }
+                  }
+                ],
+                "combinator": "and"
               },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "9165e6b0-83c0-40f6-82cf-9f4469404ae9",
-                      "leftValue": "={{ $json.tipo }}",
-                      "rightValue": "lista",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "f32bb559-7b6d-405c-9648-9c4eb0b91d24",
-                      "leftValue": "={{ $json.tipo }}",
-                      "rightValue": "materia",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "354bb614-fc63-430e-9e8a-fa2bf89eb2c9",
-                      "leftValue": "={{ $json.tipo }}",
-                      "rightValue": "matricularse",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "8b7b7bbf-5ee9-44b7-aa69-5b2c5dc3b790",
-                      "leftValue": "={{ $json.tipo }}",
-                      "rightValue": "confirmar",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "efc04bfa-29cc-43c4-b93b-dbb640a9f630",
-                      "leftValue": "={{ $json.tipo }}",
-                      "rightValue": "",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals",
-                        "name": "filter.operator.equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "507f0f69-3dec-4a7e-b8a7-4009f33f3c4e",
-                      "leftValue": "",
-                      "rightValue": "",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals",
-                        "name": "filter.operator.equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              }
-            ]
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.switch",
-        "typeVersion": 3.4,
-        "position": [
-          -672,
-          944
-        ],
-        "id": "39231883-e189-4d62-b551-dd2ae75623e3",
-        "name": "ruta_lista_o_menu"
-      },
-      {
-        "parameters": {
-          "rules": {
-            "values": [
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "leftValue": "={{ $json.status }}",
-                      "rightValue": "error",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      },
-                      "id": "29489ab0-18cc-46fb-98b5-95591edc9bf9"
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "2d71c968-ce61-49c9-a5aa-dea215ffded1",
-                      "leftValue": "={{ $json.status }}",
-                      "rightValue": "ok",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              }
-            ]
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.switch",
-        "typeVersion": 3.4,
-        "position": [
-          -496,
-          160
-        ],
-        "id": "0df05d8e-3e88-4bf3-aad2-03c6177937ca",
-        "name": "Switch1"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('Webhook').item.json.body.chatId }}\",\n  \"text\": \"❌ {{ $json.message }} vuelve a intentar.\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"🔙 Regresar al menú principal\",\n          \"callback_data\": \"menu#regreso\"\n        }\n      ]\n    ]\n  }\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          -272,
-          -112
-        ],
-        "id": "c765c163-ca54-4c14-badd-f42a4ffdab7e",
-        "name": "mensaje de error"
-      },
-      {
-        "parameters": {
-          "jsCode": "const materias = items; \n\nconst botones = materias.map(item => {\n    return [{\n        text: item.json.nombre_materia, \n        callback_data: `materia#${item.json.materia_id}` \n    }];\n});\n\nreturn [{\n  json: {\n    text: \"Selecciona la materia que deseas matricular:\",\n    reply_markup: {\n      inline_keyboard: botones\n    }\n  }\n}];"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          336,
-          1856
-        ],
-        "id": "b4b76f6f-f139-4a31-8fac-36bc5c4bb839",
-        "name": "Code in JavaScript"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('validacion de datos.').item.json.chatId }}\",\n  \"text\": \"✅ *¡Registro Exitoso!*\\n\\nHola *{{ $json.nombre }}*, tus datos han sido procesados correctamente:\\n\\n🆔 *ID de Estudiante:* `{{ $json.estudiante_id }}`\\n📧 *Email:* {{ $json.email }}\\n🎓 *Carrera:* {{ $json.carrera }}\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"🔙 Regresar al menú principal\",\n          \"callback_data\": \"menu#regreso\"\n        }\n      ]\n    ]\n  }\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          80,
-          80
-        ],
-        "id": "c8e3ca30-7159-4b96-a7a0-2a63fc53379d",
-        "name": "registro"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('diferenciar por etiquetas').item.json.chat_id }}\",\n  \"text\": \"{{ $json.text }}\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {{ JSON.stringify($json.reply_markup) }}\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          576,
-          1856
-        ],
-        "id": "c498f589-8005-4351-b921-6b6bc3753666",
-        "name": "matricula"
-      },
-      {
-        "parameters": {
-          "jsCode": "const itemJson = items[0].json;\nconst isCallback = itemJson.callback_query !== undefined;\n\nlet tipo = 'menu';\nlet valor = 'regreso';\n\nlet chatId = itemJson.callback_query?.message?.chat?.id || itemJson.message?.chat?.id;\nlet firstName = itemJson.callback_query?.from?.first_name || itemJson.message?.from?.first_name || \"Usuario\";\n\nif (isCallback && itemJson.callback_query.data && itemJson.callback_query.data.includes('#')) {\n    const parts = itemJson.callback_query.data.split('#');\n    tipo = parts[0].trim();\n    valor = parts[1].trim(); \n} \nelse if (itemJson.message?.text) {\n    const textoUsuario = itemJson.message.text.trim().toUpperCase();\n    \n    // Verificamos si es formato E000\n    if (/^E\\d{3}$/.test(textoUsuario)) {\n        tipo = 'matricularse';\n        valor = textoUsuario; // Asignamos el valor en mayúsculas\n    } else {\n        // Si no cumple el formato, dejamos tipo 'menu' y valor 'regreso'\n        tipo = 'menu';\n        valor = 'regreso';\n    }\n}\n\nreturn {\n  json: {\n    tipo: tipo,\n    valor: valor,\n    chat_id: chatId,\n    first_name: firstName \n  }\n};"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          -848,
-          992
-        ],
-        "id": "aa45ce4c-1d56-4dd3-a07f-cda3fd56423c",
-        "name": "diferenciar por etiquetas"
-      },
-      {
-        "parameters": {
-          "operation": "update",
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 1219785828,
-            "mode": "list",
-            "cachedResultName": "matricula",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=1219785828"
-          },
-          "columns": {
-            "mappingMode": "defineBelow",
-            "value": {
-              "materia_id": "={{ $json.materia_id }}",
-              "row_number": "={{ $json.fila }}"
-            },
-            "matchingColumns": [
-              "row_number"
-            ],
-            "schema": [
-              {
-                "id": "estudiante_id",
-                "displayName": "estudiante_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "nombre",
-                "displayName": "nombre",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "email",
-                "displayName": "email",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "carrera",
-                "displayName": "carrera",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "materia_id",
-                "displayName": "materia_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": false
-              },
-              {
-                "id": "nombre_materia",
-                "displayName": "nombre_materia",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "tutor_id",
-                "displayName": "tutor_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "tutor",
-                "displayName": "tutor",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "horario_id",
-                "displayName": "horario_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "dia",
-                "displayName": "dia",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "hora_inicio",
-                "displayName": "hora_inicio",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "hora_fin",
-                "displayName": "hora_fin",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "estado",
-                "displayName": "estado",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "fila",
-                "displayName": "fila",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "row_number",
-                "displayName": "row_number",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "number",
-                "canBeUsedToMatch": true,
-                "readOnly": true,
-                "removed": false
-              }
-            ],
-            "attemptToConvertTypes": false,
-            "convertFieldsToString": false
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          320,
-          1664
-        ],
-        "id": "e926cfa4-bd92-4ecb-87d0-5631329c51da",
-        "name": "Update row in sheet",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "jsCode": "// Referencia al nodo anterior por su nombre exacto\nconst filas = $('obtener matricula').all(); \n\nif (filas.length > 0) {\n    // Tomamos la última fila encontrada\n    const ultimaFila = filas[filas.length - 1]; \n    \n    // Obtenemos el número de fila de la propiedad que entrega Google Sheets\n    const numeroFila = ultimaFila.json.row_number; \n\n    return [{\n        json: {\n            fila: numeroFila,\n            // Extraemos el ID del horario del nodo que recibe el webhook\n            materia_id: $('recibe el callback_querys').first().json.callback_query.data.split('#')[1]\n        }\n    }];\n}"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          128,
-          1664
-        ],
-        "id": "18093e67-381d-4ce3-b0bf-f869d6efe286",
-        "name": "Code in JavaScript3"
-      },
-      {
-        "parameters": {
-          "jsCode": "// Obtenemos los datos del nodo anterior\nconst items = $('obtener matricula actualizada').all(); \nconst ultimaFila = items[items.length - 1].json;\n\n// Creamos el mensaje\nconst mensaje = `✅ *¡Te has matriculado correctamente!*\n\n👤 *Estudiante:* ${ultimaFila.nombre}\n📚 *Materia:* ${ultimaFila.nombre_materia}\n👨‍🏫 *Profesor:* ${ultimaFila.tutor}\n📅 *Día:* ${ultimaFila.dia}\n⏰ *Horario:* ${ultimaFila.hora_inicio} a ${ultimaFila.hora_fin}`;\n\n// Retornamos solo el texto\nreturn [{\n    json: {\n        text: mensaje \n    }\n}];"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          624,
-          2048
-        ],
-        "id": "7849c5cb-8389-4a96-9fc5-4e6e93859179",
-        "name": "Code in JavaScript5"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $json.chat_id }}\",\n  \"text\": \"Hola, {{ $json.first_name }}, quieres consultar uno de nuestros servicios disponibles, selecciona tu opción:\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"registro\",\n          \"callback_data\": \"menu#registro\"\n        },\n        {\n          \"text\": \"consultas\",\n          \"callback_data\": \"menu#consultas\"\n        },\n        {\n          \"text\": \"matricularse\",\n          \"callback_data\": \"menu#matricula\"\n        }\n      ]\n    ]\n  }\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          -32,
-          1280
-        ],
-        "id": "37ec5f28-8422-4a61-9795-31f825f9aef5",
-        "name": "menu_principal"
-      },
-      {
-        "parameters": {
-          "jsCode": "const webhookInput = $('Webhook').first();\nconst datosForm = webhookInput ? webhookInput.json.body : null;\n\nif (!datosForm) {\n    return [{ json: { status: \"error\", message: \"No se recibieron datos del formulario.\" } }];\n}\n\nconst todosLosEstudiantes = (items && items.length > 0 && items[0].json.estudiante_id) ? items : [];\n\nconst tipo = datosForm.tipo;\n\nif (tipo === 'registro') {\n    const emailExistente = todosLosEstudiantes.find(item => \n        item.json.email && item.json.email.toLowerCase() === datosForm.email.toLowerCase()\n    );\n\n    if (emailExistente) {\n        return [{ json: { status: \"error\", message: \"Lo siento, ese email ya se encuentra registrado.\" } }];\n    }\n\n    const lastId = todosLosEstudiantes.length > 0 \n        ? todosLosEstudiantes[todosLosEstudiantes.length - 1].json.estudiante_id \n        : \"E000\";\n    \n    const number = parseInt(lastId.substring(1)) + 1;\n    const newId = \"E\" + number.toString().padStart(3, '0');\n\n    return [{ json: { ...datosForm, estudiante_id: newId, status: \"ok\" } }];\n}\n\nif (tipo === 'matricula') {\n    if (todosLosEstudiantes.length === 0) {\n         return [{ json: { status: \"error\", message: \"No hay registros de estudiantes para matricular.\" } }];\n    }\n\n    const estudianteExiste = todosLosEstudiantes.find(item => \n        item.json.estudiante_id === datosForm.estudiante_id\n    );\n    \n    if (!estudianteExiste) {\n        return [{ json: { status: \"error\", message: \"El código de estudiante no existe. Por favor verifica.\" } }];\n    }\n\n    return [{ json: { ...datosForm, status: \"ok\" } }];\n}\n\nreturn [{ json: { status: \"error\", message: \"Tipo de operación no reconocida.\" } }];"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          -672,
-          160
-        ],
-        "id": "ac2f9b2b-4e45-4264-860d-5169b6cc9d68",
-        "name": "validacion de datos.",
-        "alwaysOutputData": true
-      },
-      {
-        "parameters": {
-          "operation": "append",
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 1219785828,
-            "mode": "list",
-            "cachedResultName": "matricula",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=1219785828"
-          },
-          "columns": {
-            "mappingMode": "defineBelow",
-            "value": {
-              "estudiante_id": "={{ $('ruta_lista_o_menu').item.json.valor }}"
-            },
-            "matchingColumns": [],
-            "schema": [
-              {
-                "id": "estudiante_id",
-                "displayName": "estudiante_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true
-              },
-              {
-                "id": "nombre",
-                "displayName": "nombre",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "email",
-                "displayName": "email",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "carrera",
-                "displayName": "carrera",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "materia_id",
-                "displayName": "materia_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "nombre_materia",
-                "displayName": "nombre_materia",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "tutor_id",
-                "displayName": "tutor_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "tutor",
-                "displayName": "tutor",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "horario_id",
-                "displayName": "horario_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "dia",
-                "displayName": "dia",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "hora_inicio",
-                "displayName": "hora_inicio",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "hora_fin",
-                "displayName": "hora_fin",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "estado",
-                "displayName": "estado",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "fila",
-                "displayName": "fila",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              }
-            ],
-            "attemptToConvertTypes": false,
-            "convertFieldsToString": false
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          -80,
-          1856
-        ],
-        "id": "fd51723c-7237-4c6d-8371-ca2e1dd02e9e",
-        "name": "Append row in sheet1",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 312719008,
-            "mode": "list",
-            "cachedResultName": "Materias",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=312719008"
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          112,
-          1856
-        ],
-        "id": "c3b2313e-1208-47f8-9c54-478c753819e5",
-        "name": "Get row(s) in sheet1",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 687256217,
-            "mode": "list",
-            "cachedResultName": "Horarios",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=687256217"
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          528,
-          1664
-        ],
-        "id": "19d89da2-dca8-440d-9c2d-7df91fcc78fe",
-        "name": "Get row(s) in sheet3",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "jsCode": "// 1. Obtenemos el ID de la materia seleccionada (desde el nodo anterior)\nconst materiaSeleccionada = $('Update row in sheet').first().json.materia_id;\n\n// 2. Filtramos usando la propiedad correcta 'id_materia'\nconst horarios = items.filter(item => {\n    // Usamos 'id_materia' que es el nombre real que aparece en tu columna de entrada\n    const idEnFila = String(item.json.id_materia || \"\").trim();\n    return idEnFila.toUpperCase() === String(materiaSeleccionada).toUpperCase();\n});\n\n// DEBUG para ver en los logs qué está pasando\nconsole.log(\"Materia buscada:\", materiaSeleccionada);\nconsole.log(\"Horarios encontrados:\", horarios.length);\n\n// 3. Formateamos los botones\nconst botones = horarios.map(h => [{\n    text: `${h.json.dia} - ${h.json.hora_inicio} a ${h.json.hora_fin}`,\n    callback_data: `confirmar#${h.json.horario_id}`\n}]);\n\n// 4. Retorno\nreturn [{\n  json: {\n    text: horarios.length > 0 \n      ? `Horarios disponibles para *${horarios[0].json.materias}*:` \n      : \"No se encontraron horarios para la materia seleccionada (\" + materiaSeleccionada + \").\",\n    reply_markup: {\n      inline_keyboard: botones\n    }\n  }\n}];"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          704,
-          1664
-        ],
-        "id": "da76926c-42a7-4d3b-ab0f-2a58f04c612e",
-        "name": "Code in JavaScript6"
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 1219785828,
-            "mode": "list",
-            "cachedResultName": "matricula",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=1219785828"
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          -32,
-          1664
-        ],
-        "id": "a68bc741-5e91-4b2e-8a24-76f37abde3ad",
-        "name": "obtener matricula",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "operation": "update",
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 1219785828,
-            "mode": "list",
-            "cachedResultName": "matricula",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=1219785828"
-          },
-          "columns": {
-            "mappingMode": "defineBelow",
-            "value": {
-              "row_number": "={{ $json.fila }}",
-              "horario_id": "={{ $json.horario_id }}"
-            },
-            "matchingColumns": [
-              "row_number"
-            ],
-            "schema": [
-              {
-                "id": "estudiante_id",
-                "displayName": "estudiante_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "nombre",
-                "displayName": "nombre",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "email",
-                "displayName": "email",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "carrera",
-                "displayName": "carrera",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "materia_id",
-                "displayName": "materia_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "nombre_materia",
-                "displayName": "nombre_materia",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "tutor_id",
-                "displayName": "tutor_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "tutor",
-                "displayName": "tutor",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "horario_id",
-                "displayName": "horario_id",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": false
-              },
-              {
-                "id": "dia",
-                "displayName": "dia",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "hora_inicio",
-                "displayName": "hora_inicio",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "hora_fin",
-                "displayName": "hora_fin",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "estado",
-                "displayName": "estado",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "fila",
-                "displayName": "fila",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "string",
-                "canBeUsedToMatch": true,
-                "removed": true
-              },
-              {
-                "id": "row_number",
-                "displayName": "row_number",
-                "required": false,
-                "defaultMatch": false,
-                "display": true,
-                "type": "number",
-                "canBeUsedToMatch": true,
-                "readOnly": true,
-                "removed": false
-              }
-            ],
-            "attemptToConvertTypes": false,
-            "convertFieldsToString": false
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          240,
-          2048
-        ],
-        "id": "35c3f44d-1646-409c-9ae7-83262ec995a7",
-        "name": "Update row in sheet1",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "jsCode": "// Referencia al nodo anterior por su nombre exacto\nconst filas = $('obtener matricula1').all(); \n\nif (filas.length > 0) {\n    // Tomamos la última fila encontrada\n    const ultimaFila = filas[filas.length - 1]; \n    \n    // Obtenemos el número de fila de la propiedad que entrega Google Sheets\n    const numeroFila = ultimaFila.json.row_number; \n\n    return [{\n        json: {\n            fila: numeroFila,\n            // Extraemos el ID del horario del nodo que recibe el webhook\n            horario_id: $('recibe el callback_querys').first().json.callback_query.data.split('#')[1]\n        }\n    }];\n}"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          48,
-          2048
-        ],
-        "id": "8bc6ebd0-57be-45d6-9cb0-1381e4133759",
-        "name": "Code in JavaScript7"
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 1219785828,
-            "mode": "list",
-            "cachedResultName": "matricula",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=1219785828"
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          -112,
-          2048
-        ],
-        "id": "29cea12e-9280-412c-9897-5ef1696c2304",
-        "name": "obtener matricula1",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 1219785828,
-            "mode": "list",
-            "cachedResultName": "matricula",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=1219785828"
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          448,
-          2048
-        ],
-        "id": "a5dfb63c-fbba-4783-9f6c-e19f63d10030",
-        "name": "obtener matricula actualizada",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('recibe el callback_querys').item.json.callback_query.message.chat.id }}\",\n  \"text\": \"{{ $json.text.replace(/\\n/g, '\\\\n') }}\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"regresar al menu principal\",\n          \"callback_data\": \"menu#regreso\"\n        }\n      ]\n    ]\n  }\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          832,
-          2048
-        ],
-        "id": "28cafade-bf98-4d7a-8c49-c8add29f4b14",
-        "name": "matricula_completada."
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('diferenciar por etiquetas').item.json.chat_id }}\",\n  \"text\": {{ JSON.stringify($json.text) }},\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"regresar al menu principal\",\n          \"callback_data\": \"menu#regreso\"\n        }\n      ]\n    ]\n  }\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          368,
-          1456
-        ],
-        "id": "410a9895-45c1-460d-8aba-b4c3160017de",
-        "name": "envio de los horarios de los profesores dinamicos"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('diferenciar por etiquetas').item.json.chat_id }}\",\n  \"text\": \"{{ $json.text }}\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {{ JSON.stringify($json.reply_markup) }}\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          944,
-          1664
-        ],
-        "id": "ef5f57ed-deec-4477-8b9f-927893a15f60",
-        "name": "envio de seleccion de materias"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={{ JSON.stringify($json) }}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          368,
-          928
-        ],
-        "id": "fbe3fef6-fbd3-4e41-b065-96aec43f5e02",
-        "name": "envia materias y profesor"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('recibe el callback_querys').item.json.callback_query.message.chat.id }}\",\n  \"text\": \"¡Bienvenido! Por favor, para registrarse debes de llenar el siguiente formulario. https://barriosevelyn488-web.github.io/Proyecto_TutorBot_evelyn-barrios_Carlos-Velasco/?chatId={{ $('recibe el callback_querys').item.json.callback_query.message.chat.id }}\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"regresar al menu principal\",\n          \"callback_data\": \"  menu#regreso\"\n        }\n      ]\n    ]\n  }\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          64,
-          384
-        ],
-        "id": "044ebbc5-e653-4415-b5d6-9fb462101ba9",
-        "name": "envio de url de registro"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('recibe el callback_querys').item.json.callback_query.message.chat.id }}\",\n  \"text\": \"Seleciona el tipo de consultas\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"Ver materias\",\n          \"callback_data\": \"  menu#materia\"\n        },\n        {\n          \"text\": \"Ver horarios y profesorl\",\n          \"callback_data\": \"  menu#horarios\"\n        }\n      ]\n    ]\n  }\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          64,
-          560
-        ],
-        "id": "1eaf2ca2-f3e4-4fee-b0f9-094a3b73cf7a",
-        "name": "envio de botones de consulta"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('recibe el callback_querys').item.json.callback_query.message.chat.id }}\",\n  \"text\": \"¡Bienvenido! Por favor, para matricularse debes de enviar tu codigo de estudiante. (ejem. E000)\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"regresar al menu principal\",\n          \"callback_data\": \"  menu#regreso\"\n        }\n      ]\n    ]\n  }\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          64,
-          736
-        ],
-        "id": "dea16903-73b2-4dbd-ac26-c389512d7bfe",
-        "name": "mensaja de para matricularse"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={{ $json }}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          384,
-          1104
-        ],
-        "id": "81a1d7c0-b49f-43ca-a427-135fd3c45730",
-        "name": "Enviar profesores."
-      },
-      {
-        "parameters": {
-          "jsCode": "const items = $input.all();\nconst lastItem = items[items.length - 1].json;\n\n// 1. EXTRAE EL CHAT_ID AQUÍ:\n// Usamos el nodo 'diferenciar por etiquetas' correctamente:\nconst chatIdEstudiante = $('diferenciar por etiquetas').first().json.chat_id;\n\n// Creamos el mensaje\nconst mensaje = `🔔 *Nueva Solicitud de Matrícula*\n\n👤 *Estudiante:* ${lastItem.nombre}\n📚 *Materia:* ${lastItem.nombre_materia}\n📅 *Día:* ${lastItem.dia}\n🕒 *Horario:* ${lastItem.hora_inicio} - ${lastItem.hora_fin}\n\n¿Deseas aceptar esta solicitud?`;\n\n// 2. USAMOS LA VARIABLE EN EL CALLBACK_DATA:\nreturn {\n  json: {\n    \"chat_id\": 7886121914,\n    \"text\": mensaje,\n    \"parse_mode\": \"Markdown\",\n    \"reply_markup\": {\n      \"inline_keyboard\": [\n        [\n          {\n            \"text\": \"✅ Aceptar\",\n            \"callback_data\": `ACEPTAR#${lastItem.estudiante_id}#${chatIdEstudiante}`\n          },\n          {\n            \"text\": \"❌ Rechazar\",\n            \"callback_data\": `RECHAZAR#${lastItem.estudiante_id}#${chatIdEstudiante}`\n          }\n        ]\n      ]\n    }\n  }\n};"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          640,
-          2240
-        ],
-        "id": "e19e1e9a-bb0b-4857-aad3-04e3964a41ed",
-        "name": "Code in JavaScript8"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8744147244:AAHcPr7ITlHyID-nNBb-sa-XwOa2ekIXBAA/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={{ $json }}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          848,
-          2240
-        ],
-        "id": "21748749-5940-4514-86cf-fda67444660d",
-        "name": "HTTP Request"
-      },
-      {
-        "parameters": {
-          "updates": [
-            "callback_query"
-          ],
-          "additionalFields": {}
-        },
-        "type": "n8n-nodes-base.telegramTrigger",
-        "typeVersion": 1.3,
-        "position": [
-          48,
-          2544
-        ],
-        "id": "03c03cb9-7bc2-449e-93d9-d29e8c8c7b8b",
-        "name": "profesor",
-        "webhookId": "c6c2229e-8675-4714-8dfe-8d6df0d0e536",
-        "credentials": {
-          "telegramApi": {
-            "id": "6Isoy0MBmmmBTRZd",
-            "name": "student"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "jsCode": "const items = $input.all();\nconst itemJson = items[0].json;\n\nconst data = itemJson.callback_query.data;\n\nconst parts = data.split('#');\n\nreturn {\n  json: {\n    tipo: parts[0].trim(),           \n    valor: parts[1].trim(),          \n    chat_id: itemJson.callback_query.message.chat.id, \n    first_name: itemJson.callback_query.from.first_name,\n    chat_estudiante: parts[2].trim() \n  }\n};"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          224,
-          2544
-        ],
-        "id": "12e2d238-cc8b-4a68-89f2-ccc8898d2e80",
-        "name": "verificacion"
-      },
-      {
-        "parameters": {
-          "rules": {
-            "values": [
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "leftValue": "={{ $json.tipo }}",
-                      "rightValue": "ACEPTAR",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      },
-                      "id": "34a7d976-6ed5-4d9a-a11b-43a8967bc44b"
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              },
-              {
-                "conditions": {
-                  "options": {
-                    "caseSensitive": true,
-                    "leftValue": "",
-                    "typeValidation": "strict",
-                    "version": 3
-                  },
-                  "conditions": [
-                    {
-                      "id": "4eea2cec-3baa-4eea-9116-9522f4e2c4ab",
-                      "leftValue": "={{ $json.tipo }}",
-                      "rightValue": "RECHAZAR",
-                      "operator": {
-                        "type": "string",
-                        "operation": "equals"
-                      }
-                    }
-                  ],
-                  "combinator": "and"
-                }
-              }
-            ]
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.switch",
-        "typeVersion": 3.4,
-        "position": [
-          432,
-          2544
-        ],
-        "id": "2b4011d2-7f85-4938-b2c5-3ef7bdfd2913",
-        "name": "Switch2"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={{ $json }}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          1696,
-          2480
-        ],
-        "id": "1181517e-538a-4945-9925-dd2e62057acd",
-        "name": "Aceptado"
-      },
-      {
-        "parameters": {
-          "method": "POST",
-          "url": "https://api.telegram.org/bot8449784982:AAEhtlI2OgmSDd_-AehSeng--SaHvW0-N2g/sendMessage",
-          "sendBody": true,
-          "specifyBody": "json",
-          "jsonBody": "={\n  \"chat_id\": \"{{ $('verificacion').item.json.chat_estudiante }}\",\n  \"text\": \"❌ *Lo sentimos, tu solicitud de matrícula ha sido rechazada.* \\n\\nPor favor, contacta al profesor para más detalles o intenta realizar tu solicitud nuevamente desde el menú principal.\",\n  \"parse_mode\": \"Markdown\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [\n        {\n          \"text\": \"🏠 Regresar al menú principal\",\n          \"callback_data\": \"menu#regreso\"\n        }\n      ]\n    ]\n  }\n}",
-          "options": {}
-        },
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 4.4,
-        "position": [
-          736,
-          2656
-        ],
-        "id": "f368336a-2791-4eb8-a61a-42457f4faad2",
-        "name": "Rechazado"
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8",
-            "mode": "list",
-            "cachedResultName": "Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 1219785828,
-            "mode": "list",
-            "cachedResultName": "matricula",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JPDkVmouJN6cY2HncSp6WqG0-ePqXMkOW1HdidmXJA8/edit#gid=1219785828"
-          },
-          "options": {}
-        },
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4.7,
-        "position": [
-          656,
-          2480
-        ],
-        "id": "a345f715-1530-4191-8a1c-633bbff6357a",
-        "name": "obtener matricula actualizada1",
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "jsCode": "// Obtenemos los datos del nodo anterior\nconst items = $input.all();\nconst lastItem = items[items.length - 1].json;\n\n// Generamos el link de una vez\nconst linkCalendario = `https://www.google.com/calendar/render?action=TEMPLATE&text=Clase+${encodeURIComponent(lastItem.nombre_materia)}&details=Matricula+confirmada+con+${encodeURIComponent(lastItem.tutor)}&location=Online`;\n\n// Creamos un prompt unificado que el AI Agent entenderá perfectamente\nconst promptUnificado = `\nActúa como un asistente académico amable. \nEl estudiante ${lastItem.nombre} ha sido aceptado en la materia ${lastItem.nombre_materia}.\nSu horario es: ${lastItem.dia} de ${lastItem.hora_inicio} a ${lastItem.hora_fin}.\nEl tutor es ${lastItem.tutor}.\n\nTu tarea:\n1. Genera un mensaje de éxito muy motivador para el estudiante.\n2. Incluye una breve frase sobre la importancia de la puntualidad.\n3. Al final, incluye obligatoriamente este enlace para agendar la clase: ${linkCalendario}\n`;\n\n// Retornamos el prompt listo para el AI Agent\nreturn {\n  json: {\n    prompt: promptUnificado,\n    chat_estudiante: lastItem.chat_id\n  }\n};"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          896,
-          2480
-        ],
-        "id": "ab596654-21bf-43a1-b968-c9912f1eb903",
-        "name": "Code in JavaScript9"
-      },
-      {
-        "parameters": {
-          "promptType": "define",
-          "text": "={{ $json.prompt }}",
-          "options": {}
-        },
-        "type": "@n8n/n8n-nodes-langchain.agent",
-        "typeVersion": 3.1,
-        "position": [
-          1120,
-          2480
-        ],
-        "id": "42a539eb-1dc9-4b9a-a077-4320b9442c9a",
-        "name": "AI Agent"
-      },
-      {
-        "parameters": {
-          "modelName": "models/gemini-2.5-flash",
-          "options": {}
-        },
-        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-        "typeVersion": 1.1,
-        "position": [
-          1040,
-          2672
-        ],
-        "id": "10e9d912-f078-402c-9bc7-c1813304b1d4",
-        "name": "Google Gemini Chat Model",
-        "credentials": {
-          "googlePalmApi": {
-            "id": "d6BVz9Yq5rWc1zDP",
-            "name": "Google Gemini(PaLM) Api account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "jsCode": "const aiData = $input.all()[0].json;\nconst mensajeIA = aiData.output || \"Error: No se generó el mensaje.\";\n\n// Reemplazamos los asteriscos de la IA para evitar errores\nconst mensajeLimpio = mensajeIA.replace(/\\*\\*/g, '');\n\nreturn {\n  json: {\n    \"chat_id\": $('verificacion').first().json.chat_estudiante,\n    \"text\": mensajeLimpio,\n    \"parse_mode\": \"Markdown\",\n    \"reply_markup\": {\n      \"inline_keyboard\": [\n        [\n          {\n            \"text\": \"📅 Agendar en mi Calendario\",\n            \"url\": \"https://www.google.com/calendar/render?action=TEMPLATE&text=Clase+Algebra+Lineal&details=Matricula+confirmada+con+Pepe&location=Online\"\n          }\n        ],\n        [\n          {\n            \"text\": \"🏠 Regresar al menú principal\",\n            \"callback_data\": \"menu#regreso\"\n          }\n        ]\n      ]\n    }\n  }\n};"
-        },
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          1440,
-          2480
-        ],
-        "id": "0a9d2b96-f4fd-4c45-80c6-78e241deb943",
-        "name": "Code in JavaScript10"
-      },
-      {
-        "parameters": {
-          "updates": [
-            "message"
-          ],
-          "additionalFields": {}
-        },
-        "type": "n8n-nodes-base.telegramTrigger",
-        "typeVersion": 1.3,
-        "position": [
-          16,
-          2944
-        ],
-        "id": "e3d1ea2a-cc52-4990-9a3a-d016145d1177",
-        "name": "Telegram Trigger",
-        "webhookId": "28cc250a-a9a1-43b3-9ac4-f3838f37603d",
-        "credentials": {
-          "telegramApi": {
-            "id": "7fJdcIvkyURN43s9",
-            "name": "Telegram account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "documentId": {
-            "__rl": true,
-            "value": "14OCtyq-fY6xRQra2ARGvLrMseKTG_WZ-XDs6xqkIYmE",
-            "mode": "list",
-            "cachedResultName": "Copia de Modelo_Asesoria_Academica_N8N",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14OCtyq-fY6xRQra2ARGvLrMseKTG_WZ-XDs6xqkIYmE/edit?usp=drivesdk"
-          },
-          "sheetName": {
-            "__rl": true,
-            "value": 1219785828,
-            "mode": "list",
-            "cachedResultName": "matricula",
-            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14OCtyq-fY6xRQra2ARGvLrMseKTG_WZ-XDs6xqkIYmE/edit#gid=1219785828"
-          },
-          "filtersUI": {
-            "values": [
-              {
-                "lookupColumn": "nombre_materia",
-                "lookupValue": "={{ $json.message.chat.id }}"
-              }
-            ]
-          },
-          "options": {}
-        },
-        "id": "4a3476b6-6caa-4736-b04a-ede63cf0ef16",
-        "name": "Google Sheets",
-        "type": "n8n-nodes-base.googleSheets",
-        "typeVersion": 4,
-        "position": [
-          224,
-          2944
-        ],
-        "alwaysOutputData": true,
-        "credentials": {
-          "googleSheetsOAuth2Api": {
-            "id": "nZfgnMFBiJeGJ67S",
-            "name": "Google Sheets account"
-          }
-        }
-      },
-      {
-        "parameters": {
-          "jsCode": "const resumen = {};\nlet total = 0;\n\nfor (const item of items) {\n const materia = item.json.materia;\n if (!materia) continue;\n\n resumen[materia] = (resumen[materia] || 0) + 1;\n total++;\n}\n\nlet mensaje = '📚 Resumen de Tutorías por Materia\\n\\n----------------------------\\n\\n';\n\nfor (const materia in resumen) {\n mensaje += `📘 ${materia}: ${resumen[materia]}\\n\\n`;\n}\n\nmensaje += `📈 TOTAL SEMANA: ${total}`;\n\nreturn [{\n json: {\n mensaje\n }\n}];"
-        },
-        "id": "998574f3-4004-4f5b-85fd-4563e118c606",
-        "name": "Resumen por Materia",
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          496,
-          2944
-        ]
-      },
-      {
-        "parameters": {
-          "chatId": "123456789",
-          "text": "={{ $json.mensaje }}",
-          "additionalFields": {}
-        },
-        "id": "16514821-8ae3-4093-89f0-ef6875895de2",
-        "name": "Telegram",
-        "type": "n8n-nodes-base.telegram",
-        "typeVersion": 1,
-        "position": [
-          768,
-          2944
-        ],
-        "webhookId": "597202c4-ca0a-41cd-b6e2-e2245372d3dd",
-        "credentials": {
-          "telegramApi": {
-            "id": "7fJdcIvkyURN43s9",
-            "name": "Telegram account"
-          }
-        }
-      }
-    ],
-    "connections": {
-      "Switch": {
-        "main": [
-          [
-            {
-              "node": "envio de url de registro",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "envio de botones de consulta",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "mensaja de para matricularse",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "Get row(s) in sheet",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "Get row(s) in sheet2",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "menu_principal",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Webhook": {
-        "main": [
-          [
-            {
-              "node": "Obtener ultimo ID",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Obtener ultimo ID": {
-        "main": [
-          [
-            {
-              "node": "validacion de datos.",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Get row(s) in sheet": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript2",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript2": {
-        "main": [
-          [
-            {
-              "node": "envia materias y profesor",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "horarios": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript1",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Get row(s) in sheet2": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript4",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript4": {
-        "main": [
-          [
-            {
-              "node": "Enviar profesores.",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "registrar al estudiante.": {
-        "main": [
-          [
-            {
-              "node": "registro",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "recibe el callback_querys": {
-        "main": [
-          [
-            {
-              "node": "diferenciar por etiquetas",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript1": {
-        "main": [
-          [
-            {
-              "node": "envio de los horarios de los profesores dinamicos",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "ruta_lista_o_menu": {
-        "main": [
-          [
-            {
-              "node": "Switch",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "horarios",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "obtener matricula",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "Append row in sheet1",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "obtener matricula1",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [],
-          []
-        ]
-      },
-      "Switch1": {
-        "main": [
-          [
-            {
-              "node": "mensaje de error",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "registrar al estudiante.",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript": {
-        "main": [
-          [
-            {
-              "node": "matricula",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "diferenciar por etiquetas": {
-        "main": [
-          [
-            {
-              "node": "ruta_lista_o_menu",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Update row in sheet": {
-        "main": [
-          [
-            {
-              "node": "Get row(s) in sheet3",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript3": {
-        "main": [
-          [
-            {
-              "node": "Update row in sheet",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript5": {
-        "main": [
-          [
-            {
-              "node": "matricula_completada.",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "validacion de datos.": {
-        "main": [
-          [
-            {
-              "node": "Switch1",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Append row in sheet1": {
-        "main": [
-          [
-            {
-              "node": "Get row(s) in sheet1",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Get row(s) in sheet1": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Get row(s) in sheet3": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript6",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript6": {
-        "main": [
-          [
-            {
-              "node": "envio de seleccion de materias",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "obtener matricula": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript3",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Update row in sheet1": {
-        "main": [
-          [
-            {
-              "node": "obtener matricula actualizada",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript7": {
-        "main": [
-          [
-            {
-              "node": "Update row in sheet1",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "obtener matricula1": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript7",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "obtener matricula actualizada": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript5",
-              "type": "main",
-              "index": 0
+              "renameOutput": true,
+              "outputKey": "consultar"
             },
             {
-              "node": "Code in JavaScript8",
-              "type": "main",
-              "index": 0
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "31ba9ed3-d309-4a06-821f-7b843bb4c7a9",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "matricularse",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "matricularse"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "0c101ebe-48a9-4521-8538-fb6969a48444",
+                    "leftValue": "",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "a543e08f-b847-4739-83c3-1e0adf5d351c",
+                    "leftValue": "",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "3e4a0573-019a-4e19-85ad-275a85af19b4",
+                    "leftValue": "",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
             }
           ]
-        ]
+        },
+        "options": {}
       },
-      "Code in JavaScript8": {
-        "main": [
-          [
-            {
-              "node": "HTTP Request",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        480,
+        928
+      ],
+      "id": "7395d9a0-ff45-4658-9b6d-b72fd504342b",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "jsCode": "const matriculas = items.map(item => item.json);\n\nlet mensaje = \"📚 Tus tutorías:\\n\\n\";\n\nlet pendientes = matriculas.filter(m => m.estado === \"Pendiente\");\nlet asignadas = matriculas.filter(m => m.estado === \"Asignada\");\nlet finalizadas = matriculas.filter(m => m.estado === \"Finalizada\");\n\n\nmensaje += \"⏳ PENDIENTES\\n\\n\";\n\nif (pendientes.length === 0) {\n  mensaje += \"No tienes solicitudes pendientes.\\n\";\n} else {\n  pendientes.forEach(m => {\n    mensaje += `📘 Materia: ${m.nombre_materia}\\n`;\n    mensaje += `📌 Estado: ${m.estado}\\n`;\n    \n    if (m.tutor && m.tutor !== \"\") {\n      mensaje += `👨‍🏫 Tutor: ${m.tutor}\\n`;\n    }\n\n    if (m.dia && m.hora_inicio) {\n      mensaje += `🕒 Horario: ${m.dia} ${m.hora_inicio}-${m.hora_fin}\\n`;\n    }\n\n    mensaje += \"\\n\";\n  });\n}\n\n\nmensaje += \"\\n👨‍🏫 ASIGNADAS\\n\\n\";\n\nif (asignadas.length === 0) {\n  mensaje += \"No tienes tutorías asignadas.\\n\";\n} else {\n  asignadas.forEach(m => {\n    mensaje += `📘 Materia: ${m.nombre_materia}\\n`;\n    mensaje += `👨‍🏫 Tutor: ${m.tutor}\\n`;\n    mensaje += `🕒 Horario: ${m.dia} ${m.hora_inicio}-${m.hora_fin}\\n\\n`;\n  });\n}\n\n\nmensaje += \"\\n✅ FINALIZADAS\\n\\n\";\n\nif (finalizadas.length === 0) {\n  mensaje += \"No tienes tutorías finalizadas.\\n\";\n} else {\n  finalizadas.forEach(m => {\n    mensaje += `📘 Materia: ${m.nombre_materia}\\n`;\n    mensaje += `👨‍🏫 Tutor: ${m.tutor}\\n\\n`;\n  });\n}\n\n\nreturn [\n  {\n    json: {\n      chat_id: matriculas[0].chat_id,\n      mensaje\n    }\n  }\n];"
       },
-      "profesor": {
-        "main": [
-          [
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1008,
+        848
+      ],
+      "id": "05af5a36-72e7-429d-8077-c0a0e82663cf",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chat_id }}",
+        "text": "={{ $json.mensaje }}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
             {
-              "node": "verificacion",
-              "type": "main",
-              "index": 0
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🏠 Menú Principal",
+                    "additionalFields": {
+                      "callback_data": "menu_principal"
+                    }
+                  }
+                ]
+              }
             }
           ]
-        ]
+        },
+        "additionalFields": {}
       },
-      "verificacion": {
-        "main": [
-          [
-            {
-              "node": "Switch2",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Switch2": {
-        "main": [
-          [
-            {
-              "node": "obtener matricula actualizada1",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "Rechazado",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "obtener matricula actualizada1": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript9",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript9": {
-        "main": [
-          [
-            {
-              "node": "AI Agent",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "AI Agent": {
-        "main": [
-          [
-            {
-              "node": "Code in JavaScript10",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Google Gemini Chat Model": {
-        "ai_languageModel": [
-          [
-            {
-              "node": "AI Agent",
-              "type": "ai_languageModel",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Code in JavaScript10": {
-        "main": [
-          [
-            {
-              "node": "Aceptado",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Telegram Trigger": {
-        "main": [
-          [
-            {
-              "node": "Google Sheets",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Google Sheets": {
-        "main": [
-          [
-            {
-              "node": "Resumen por Materia",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Resumen por Materia": {
-        "main": [
-          [
-            {
-              "node": "Telegram",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1200,
+        848
+      ],
+      "id": "1f09f55b-d770-46ef-9211-fc0a74af69c2",
+      "name": "Send a text message1",
+      "webhookId": "176f2680-451b-4385-b01e-1d3efe2cfbee",
+      "credentials": {
+        "telegramApi": {
+          "id": "KtV1VQCAg3OiCu9q",
+          "name": "student"
+        }
       }
     },
-    "pinData": {},
-    "meta": {
-      "templateCredsSetupCompleted": true,
-      "instanceId": "16ac2953478bde5915c5681715b4b41c3106ad6db78cacbd37e670329ff0a90d"
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        928,
+        1280
+      ],
+      "id": "9aa776f1-32e4-47a2-8015-7191f4bc65a9",
+      "name": "Append row in sheet"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1152,
+        1280
+      ],
+      "id": "528bf001-5beb-4fc3-bf8e-fdcf839d875c",
+      "name": "Update row in sheet"
+    },
+    {
+      "parameters": {
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1360,
+        1280
+      ],
+      "id": "0e86dbfa-9539-49f3-8185-a05ca1e71489",
+      "name": "Send a text message5",
+      "webhookId": "857d094b-c0a1-4db4-bddb-6d6c61cb3ffd",
+      "credentials": {
+        "telegramApi": {
+          "id": "dRAq4dhFssnbic4r",
+          "name": "cordinación"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "a75792bf-f426-4f49-8fb6-591ce5f58c65",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -176,
+        -48
+      ],
+      "id": "f4760943-e140-458f-8ff5-3ed93868ba84",
+      "name": "Webhook",
+      "webhookId": "a75792bf-f426-4f49-8fb6-591ce5f58c65"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        64,
+        -48
+      ],
+      "id": "a1dc69b1-415c-4ae5-9763-43d8bfbd3eb9",
+      "name": "Get row(s) in sheet6",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "UZz5AAZYedp05jWm",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        256,
+        -48
+      ],
+      "id": "f6f299a8-cbd7-4c5f-a313-17a433d6bf83",
+      "name": "Code in JavaScript4"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        432,
+        -48
+      ],
+      "id": "b8641631-1d2c-4af2-835a-4d8ece2f2926",
+      "name": "Append row in sheet1"
+    },
+    {
+      "parameters": {
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        640,
+        -48
+      ],
+      "id": "39811951-8409-41b8-aee7-e326ca8c0500",
+      "name": "Send a text message12",
+      "webhookId": "93684ce9-0812-411d-ac9c-090134dabd38",
+      "credentials": {
+        "telegramApi": {
+          "id": "dRAq4dhFssnbic4r",
+          "name": "cordinación"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        848,
+        -48
+      ],
+      "id": "ae2c2985-5d07-41ca-8a13-3380d7ede958",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('validar registro').item.json.chat_id }}",
+        "text": "={{ $json.texto }}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📚 Matricularme",
+                    "additionalFields": {
+                      "callback_data": "matricularse"
+                    }
+                  },
+                  {
+                    "text": "🔎 Consultar tutorías",
+                    "additionalFields": {
+                      "callback_data": "consultar"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1040,
+        256
+      ],
+      "id": "f8719c56-1eba-46d1-a864-7554d1230092",
+      "name": "registrado",
+      "webhookId": "9c80f228-90be-455d-a77b-7d76f8054f9c",
+      "credentials": {
+        "telegramApi": {
+          "id": "KtV1VQCAg3OiCu9q",
+          "name": "student"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo",
+          "mode": "list",
+          "cachedResultName": "n8n_tutorbot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Estudiantes",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "chat_id",
+              "lookupValue": "={{ $json.callback_query?.from?.id || $json.message?.chat?.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        272,
+        560
+      ],
+      "id": "911f750b-fe97-49ba-a349-889670bfe949",
+      "name": "validar registro",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "UZz5AAZYedp05jWm",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('estudiante').item.json.message.chat.id }}",
+        "text": "👋 ¡Bienvenido a TutorBot!  Hemos verificado que aún no se encuentra registrado en el sistema de tutorías.  Para poder matricularse, consultar sus materias y utilizar todas las funciones del bot, primero debe completar su registro.  📋 Presione el botón «📝 Registrarse» para abrir el formulario y completar sus datos.  Una vez finalice el registro, vuelva a este chat y envíe cualquier mensaje para continuar.",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📝 Registrarse",
+                    "additionalFields": {
+                      "url": "https://barriosevelyn488-web.github.io/proyecto_TutorBot_evelyn-barrios_carlos-velas/"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        960,
+        592
+      ],
+      "id": "c7283068-78a0-4c12-a622-538ff8a36ced",
+      "name": "no_registrado",
+      "webhookId": "1bea2c67-719a-455d-87fd-254c28be802d",
+      "credentials": {
+        "telegramApi": {
+          "id": "KtV1VQCAg3OiCu9q",
+          "name": "student"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo",
+          "mode": "list",
+          "cachedResultName": "n8n_tutorbot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 799264025,
+          "mode": "list",
+          "cachedResultName": "Materias",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo/edit#gid=799264025"
+        },
+        "filtersUI": {
+          "values": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        688,
+        1280
+      ],
+      "id": "759e19a6-929b-4b26-8d10-f72e9dfc7b99",
+      "name": "matricularse"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      texto: \"👋 Bienvenido nuevamente a TutorBot.\\n\\nSeleccione una opción para continuar.\",\n      botones: [\n        [\n          {\n            text: \"📚 Matricularme\",\n            callback_data: \"matricularse\"\n          },\n          {\n            text: \"🔎 Consultar tutorías\",\n            callback_data: \"consultar\"\n          }\n        ]\n      ]\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        864,
+        256
+      ],
+      "id": "d0d969af-47d6-451a-8cb8-24d7478b807f",
+      "name": "Code in JavaScript5"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0b694070-ecd7-484c-8119-14c8497140ee",
+              "name": "registrado1",
+              "value": "={{ $json.chat_id !== undefined && $json.chat_id !== \"\" }}",
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        480,
+        560
+      ],
+      "id": "6ba0e375-3fd5-4db9-9da1-bb1e592fa99a",
+      "name": "registrado1"
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message",
+          "callback_query"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -128,
+        576
+      ],
+      "id": "43ab0c99-ca3e-4d75-af2e-ea2982b67884",
+      "name": "estudiante",
+      "webhookId": "bf1bddcc-36e8-4ca7-a23d-eedbb60d948f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KtV1VQCAg3OiCu9q",
+          "name": "student"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo",
+          "mode": "list",
+          "cachedResultName": "n8n_tutorbot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1904186232,
+          "mode": "list",
+          "cachedResultName": "matricula",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo/edit#gid=1904186232"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "chat_id",
+              "lookupValue": "={{ $json.callback_query.from.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        784,
+        848
+      ],
+      "id": "26c0d16b-8b14-48a5-a283-e038760d0a57",
+      "name": "buscar_matriculas",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "UZz5AAZYedp05jWm",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "dd2e7edd-0a3b-4b42-ab42-ce51b363dad9",
+              "leftValue": "={{ $json.callback_query !== undefined }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        48,
+        576
+      ],
+      "id": "3da6eb60-3ff6-4828-8425-6b7ddf9436f5",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        96,
+        1744
+      ],
+      "id": "c56fef42-81a0-43e2-824a-bf673ecf4821",
+      "name": "Telegram Trigger",
+      "webhookId": "28cc250a-a9a1-43b3-9ac4-f3838f37603d",
+      "credentials": {
+        "telegramApi": {
+          "id": "dRAq4dhFssnbic4r",
+          "name": "cordinación"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo",
+          "mode": "list",
+          "cachedResultName": "n8n_tutorbot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 634347187,
+          "mode": "list",
+          "cachedResultName": "semana",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O6cW5A7rbP6rQoUwLzqxJ07OiWXifCDN6a4Gg6PIFwo/edit#gid=634347187"
+        },
+        "options": {}
+      },
+      "id": "1ad822da-074f-4166-aa9d-516849cc26d7",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        544,
+        1728
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "UZz5AAZYedp05jWm",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const resumen = {};\nlet total = 0;\n\nfor (const item of items) {\n  const materia = item.json.materia;\n  if (!materia) continue;\n\n  resumen[materia] = (resumen[materia] || 0) + 1;\n  total++;\n}\n\nlet mensaje = \"📚 Resumen de Tutorías por Materia\\n\\n\";\nmensaje += \"----------------------------\\n\\n\";\n\n// Muestra las materias con el emoji solicitado\nif (resumen[\"Matemáticas\"]) {\n  mensaje += `🧮 Matemáticas: ${resumen[\"Matemáticas\"]}\\n\\n`;\n}\n\nif (resumen[\"Programación\"]) {\n  mensaje += `💻 Programación: ${resumen[\"Programación\"]}\\n\\n`;\n}\n\nif (resumen[\"Química\"]) {\n  mensaje += `🧪 Química: ${resumen[\"Química\"]}\\n\\n`;\n}\n\n// Si existen otras materias, también se muestran\nfor (const materia in resumen) {\n  if (\n    materia !== \"Matemáticas\" &&\n    materia !== \"Programación\" &&\n    materia !== \"Química\"\n  ) {\n    mensaje += `📘 ${materia}: ${resumen[materia]}\\n\\n`;\n  }\n}\n\nmensaje += `📈 TOTAL SEMANA: ${total}`;\n\nreturn [\n  {\n    json: {\n      mensaje\n    }\n  }\n];\n  "
+      },
+      "id": "5b834c98-39de-4b9d-aa3b-797eb7a819a9",
+      "name": "Resumen por Materia",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        816,
+        1728
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "={{ $json.mensaje }}",
+        "additionalFields": {}
+      },
+      "id": "31dba038-29db-4049-aa60-2d589a8c1e24",
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        1056,
+        1728
+      ],
+      "webhookId": "597202c4-ca0a-41cd-b6e2-e2245372d3dd",
+      "credentials": {
+        "telegramApi": {
+          "id": "dRAq4dhFssnbic4r",
+          "name": "cordinación"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "edf90d15-1dfe-4dd9-b412-fc1812c63b48",
+              "leftValue": "={{ $json.message.text.toLowerCase() }}",
+              "rightValue": "reporte",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        304,
+        1744
+      ],
+      "id": "3b39fc8b-6854-4037-b3fc-9320d06b4c93",
+      "name": "If2"
     }
-  }
+  ],
+  "pinData": {},
+  "connections": {
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "no_registrado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "buscar_matriculas",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "matricularse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Send a text message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a text message5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet6": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript4": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet1": {
+      "main": [
+        [
+          {
+            "node": "Send a text message12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a text message12": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "validar registro": {
+      "main": [
+        [
+          {
+            "node": "registrado1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "matricularse": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript5": {
+      "main": [
+        [
+          {
+            "node": "registrado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "registrado1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "estudiante": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar_matriculas": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "validar registro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Resumen por Materia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resumen por Materia": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "89a18d13-cf7d-4dc2-9beb-e5972ce0ef8a",
+  "meta": {
+    "instanceId": "e90e2b586bb3c97da78c80ef76732c4694aa4cc4a4ef1813cafd6ef1c6374a45"
+  },
+  "nodeGroups": [],
+  "id": "jiJUsvQwBFx6K9AI",
+  "tags": []
+}
